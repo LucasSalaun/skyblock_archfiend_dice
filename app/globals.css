@@ -20,7 +20,62 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at center, #0000ff, #000000);
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 36px;
+  font-family: Monaco, sans-serif;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 15px rgba(255, 255, 254, 0.7);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh; /* IMPORTANT */
+  width: 100%;
+  text-align: center;
+}
+
+.money {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.dice {
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.roll-button {
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 75, 43, 0.5);
+  transition: 0.2s;
+}
+
+.roll-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 75, 43, 0.8);
+}
+
+.roll-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
