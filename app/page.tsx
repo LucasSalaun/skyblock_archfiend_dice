@@ -62,6 +62,39 @@ export default function Home() {
       >
         {rolling ? "Rolling..." : "Roll Dice"}
       </button>
+
+      
+            <button
+        className="roll-button"
+        disabled={rolling}
+        onClick={() => {
+          if (money < 66_000_000) {
+            alert("Not enough money to roll 10 dices!");
+            return;
+          }
+          setRolling(true);
+          for (let i=0;i<10;i++){
+
+          const result = rollDice();
+            setResult2(result.toLocaleString());
+            setMoney((prev) => prev - 6_600_000);
+
+            if (result === 6) {
+              setMoney((prev) => prev + 100_000_000);
+            }
+
+            if (result === 7) {
+              alert(
+                "Congratulations! You rolled a 7 and won an Archfiend Dye! You can sell it for 37 million coins",
+              );
+            }
+
+            setRolling(false);
+        }
+        }}
+      >
+        {rolling ? "Rolling..." : "Roll x10(66M)"}
+      </button>
     </main>
   );
 }
