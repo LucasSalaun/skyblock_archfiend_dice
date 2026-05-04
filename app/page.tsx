@@ -2,16 +2,17 @@
 import { useState } from "react";
 
 export default function Home() {
+  const repoName = "/archfiend_dice";
   const [money, setMoney] = useState(100_000_000);
   const [rolling, setRolling] = useState(false);
   const [result2, setResult2] = useState("?");
   const playSoundNormal = () => {
-    const normal = new Audio("/dice_sound_normal.m4a");
+    const normal = new Audio("${repoName}//dice_sound_normal.m4a");
     normal.volume = 0.5;
     normal.play();
   };
   const playSoundWin = () => {
-    const win = new Audio("/dice_sound_win.m4a");
+    const win = new Audio("${repoName}//dice_sound_win.m4a");
     win.volume = 0.5;
     win.play();
   };
@@ -21,7 +22,7 @@ export default function Home() {
       <h1>Archfiend Dice Simulator</h1>
       <div className="money">{money.toLocaleString()} coins</div>
       <h2>You rolled {result2}</h2>
-      <img src="/dice.webp" alt="dice" width={150} className="dice" />
+      <img src={`${repoName}/dice.webp`} alt="dice" width={150} className="dice" />
       <button
         className="roll-button"
         disabled={rolling}
