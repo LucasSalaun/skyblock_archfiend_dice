@@ -2,17 +2,17 @@
 import { useState } from "react";
 
 export default function Home() {
-  const repoName = "/archfiend_dice";
+  const repoName = "/skyblock_archfiend_dice";
   const [money, setMoney] = useState(100_000_000);
   const [rolling, setRolling] = useState(false);
   const [result2, setResult2] = useState("?");
   const playSoundNormal = () => {
-    const normal = new Audio("${repoName}//dice_sound_normal.m4a");
+    const normal = new Audio('${repoName}//dice_sound_normal.m4a');
     normal.volume = 0.5;
     normal.play();
   };
   const playSoundWin = () => {
-    const win = new Audio("${repoName}//dice_sound_win.m4a");
+    const win = new Audio('${repoName}//dice_sound_win.m4a');
     win.volume = 0.5;
     win.play();
   };
