@@ -27,9 +27,10 @@ body {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 75px;
+  font-weight: bold;
   font-family: Monaco, sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   color: white;
   text-shadow: 0 0 15px rgba(255, 255, 254, 0.7);
 }
@@ -49,6 +50,7 @@ main {
   font-size: 28px;
   font-weight: bold;
   color: #ffd700;
+  margin-bottom: 25px;
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
 
@@ -57,8 +59,37 @@ main {
   transition: transform 0.3s ease;
 }
 
+.buyDiceButton {
+  padding: 10px 20px;
+  margin: 1em 0.5em 1em 0.5em;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 114, 255, 0.5);
+  transition: 0.2s;
+}
+
+.sellDyeButton {
+  padding: 10px 20px;
+  margin: 1em 0.5em 1em 0.5em;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #8400ff, #e62bff);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(132, 0, 255, 0.5);
+  transition: 0.2s;
+}
+
 .roll-button {
   padding: 12px 25px;
+  margin: 1em 0.5em 1em 0.5em;
   font-size: 18px;
   font-weight: bold;
   color: white;
@@ -70,12 +101,16 @@ main {
   transition: 0.2s;
 }
 
-.roll-button:hover {
+.roll-button:hover,
+.buyDiceButton:hover,
+.sellDyeButton:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 75, 43, 0.8);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
 }
 
-.roll-button:disabled {
+.roll-button:disabled,
+.buyDiceButton:disabled,
+.sellDyeButton:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
